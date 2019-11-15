@@ -1,7 +1,7 @@
 # ROLO_LunarCalibration
 IDL programs for estimating lunar irradiance with ROLO model at given date.
 
-Usage exampl
+Usage example
 ```
   obs_date = '2019-12-12T00:00:00'
   obs_sat_name = 'Terra'
