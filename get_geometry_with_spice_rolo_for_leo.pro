@@ -4,7 +4,7 @@
 ;;
 ;; lunar_pos.tmの記述を参照
 ;; CSPICE_FURNSH, 'lunar_pos.tm'
-;; で読み込める. 各衛星の軌道SPKは別途個別用に用意
+;; で読み込める. 各衛星の軌道SPKは別途個別用意必要
 ;;
 
 ;; Author: Toru Kouyama (t.kouyama@aist.go.jp)
