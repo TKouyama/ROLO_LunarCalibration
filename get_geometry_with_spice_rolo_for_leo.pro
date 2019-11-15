@@ -11,7 +11,7 @@
 
 ;;
 ;; 2015.08.12: phase angleを出力に追加
-;; 2019.11.15: LEO用に清書. generic_kernelと考慮する衛星の軌道のSPKファイルが必要
+;; 2019.11.15: LEO用に清書.
 ;;
 function get_geometry_with_spice_ROLO_for_LEO $
            ,Obs_date $                  ;;  観測時間
