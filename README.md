@@ -1,2 +1,4 @@
 # ROLO_LunarCalibration
-Estimate Moon brightness with ROLO model
+IDL programs for estimating lunar irradiance with ROLO model at given date.
+
+
