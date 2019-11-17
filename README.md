@@ -1,7 +1,11 @@
 # ROLO_LunarCalibration
-IDL programs for estimating lunar irradiance with ROLO model at given date.
+IDL programs for estimating lunar irradiance with the ROLO model at a given date. These programs were used in:
+- Kouyama et al., Development of an application scheme for the SELENE/SP lunar reflectance model for radiometric calibration of hyperspectral and multispectral sensors, Planetary and Space Science, 2016.
+- Kouyama et al., Lunar calibration for ASTER VNIR and TIR with observations of the Moon in 2003 and 2017, Remote Sensing, accepted.
 
-Usage example
+(Not completed yet.)
+
+Usage example:
 ```
   obs_date = '2019-12-12T00:00:00'
   obs_sat_name = 'Terra'
