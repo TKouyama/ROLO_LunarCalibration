@@ -3,6 +3,11 @@ IDL programs for estimating lunar irradiance with the ROLO model at a given date
 - Kouyama et al., Development of an application scheme for the SELENE/SP lunar reflectance model for radiometric calibration of hyperspectral and multispectral sensors, Planetary and Space Science, 2016.
 - Kouyama et al., Lunar calibration for ASTER VNIR and TIR with observations of the Moon in 2003 and 2017, Remote Sensing, accepted.
 
+This repository will be composed of:
+- Program for converting TLE to SPK kernel
+- Program for calculating obsrevation geometry at a given date
+- Program for estimating lunar irradiance with the ROLO model
+
 (Not completed yet.)
 
 Usage example:
