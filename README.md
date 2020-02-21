@@ -5,8 +5,8 @@ IDL programs for estimating lunar irradiance with the ROLO model at a given date
 
 This repository will be composed of:
 - Program for converting TLE to SPK kernel
-- Program for calculating obsrevation geometry at a given date
-- Program for estimating lunar irradiance with the ROLO model
+- Program for calculating obsrevation geometry at a given date using SPICE toolkit
+- Program for estimating lunar irradiance at the given geometry with the ROLO model
 
 (Not completed yet.)
 
