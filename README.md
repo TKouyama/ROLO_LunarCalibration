@@ -7,9 +7,9 @@ This repository will be composed of:
 - Program for converting TLE to SPK kernel:
     - src/read_tle_for_AIST_ROLO.pro
 - Program for calculating obsrevation geometry at a given date using SPICE toolkit:
-    get_geometry_with_spice_Rolo_location in estimate_ROLO_brignthess_band.pro
+    - get_geometry_with_spice_Rolo_location in src/estimate_ROLO_brignthess_band.pro
 - Program for estimating lunar irradiance at the given geometry with the ROLO model:
-    estimate_ROLO_brignthess_band.pro
+    - src/estimate_ROLO_brignthess_band.pro
 
 (Not completed yet.)
 
