@@ -4,9 +4,12 @@ IDL programs for estimating lunar irradiance with the ROLO model at a given date
 - Kouyama et al., Lunar calibration for ASTER VNIR and TIR with observations of the Moon in 2003 and 2017, Remote Sensing, accepted.
 
 This repository will be composed of:
-- Program for converting TLE to SPK kernel
-- Program for calculating obsrevation geometry at a given date using SPICE toolkit
-- Program for estimating lunar irradiance at the given geometry with the ROLO model
+- Program for converting TLE to SPK kernel:
+    src/read_tle_for_AIST_ROLO.pro
+- Program for calculating obsrevation geometry at a given date using SPICE toolkit:
+    get_geometry_with_spice_Rolo_location in estimate_ROLO_brignthess_band.pro
+- Program for estimating lunar irradiance at the given geometry with the ROLO model:
+    estimate_ROLO_brignthess_band.pro
 
 (Not completed yet.)
 
