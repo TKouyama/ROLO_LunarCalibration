@@ -61,60 +61,11 @@ pro get_radiance_ROLO, sol_rad, solfname=solfname, test=test,wav=wav
     ;cd,old_dir
     return
   endif
+
   ;; SP modelに対応したチャンネルで太陽光入射量出力 ;;
   ;print,sol_rad
-  
-  ;; test 用 or 出力用;;
-  ;; Band毎の相対波長透過特性 ;;
-  band_response,ch_wav_all=ch_wav_all,contrib_all=contrib_all,/no_plot
-  s_ch_wav_all = shift(ch_wav_all,-1)
-  pos = where((ch_wav_all-s_ch_wav_all) gt 0)
-  ch_wav1 = ch_wav_all[0:pos[0]-1]
-  ch_wav2 = ch_wav_all[pos[0]:pos[1]-1]
-  ch_wav3 = ch_wav_all[pos[1]:pos[2]-1]
-  
-  contrib1 = contrib_all[0:pos[0]-1]
-  contrib2 = contrib_all[pos[0]:pos[1]-1]
-  contrib3 = contrib_all[pos[1]:pos[2]-1]
-  
-  pos1 = where(contrib1 gt 0.05)
-  pos2 = where(contrib2 gt 0.05)
-  pos3 = where(contrib3 gt 0.05)
-  
-  ;; Aster での観測幅での太陽光フラックス
-  wav_aster = dindgen(1000)/1000.*(min(wav)-min(ch_wav1[pos1])*1000.) + min(ch_wav1[pos1])*1000.
-  ;sol_rad_aster=f_get_radiance_lism(ifname, wav_aster,obs_wav=obs_wav,obs_rad=obs_rad) ; W/m2/nm
-  sol_rad_aster=f_get_radiance_integ(obs_wav,obs_rad,wav_aster) ; W/m2/nm
-  
-  ;; Plot ;;
-  loadct,0,/silent
-  xs = 450 & xe = 950
-  ys = 0.8 & ye = 2.2
-  plot,obs_wav,obs_rad,xrange=[xs,xe],yrange=[ys,ye],xstyle=1,ystyle=1,thick=1 $
-    ,color=196
-    
-  loadct,39,/silent
-  oplot,wav_aster,2+0*sol_rad_aster,linestyle=0,color=254,thick=6
-  oplot,ch_wav1[pos1]*1000, 1.86+0*contrib1[pos1],color=82,linestyle=0,thick=6
-  oplot,ch_wav2[pos2]*1000, 1.5 +0*contrib2[pos2],color=128,linestyle=0,thick=6
-  oplot,ch_wav3[pos3]*1000, 1.1 +0*contrib3[pos3],color=253,linestyle=0,thick=6
-  
-  ;; SP modelがカバーする範囲
-  oplot,wav,sol_rad,linestyle=0,color=0,thick=3
-  
-  ;; Band特性
-  tmp_ys=0 & tmp_ye = 2.
-  plot,ch_wav1*1000, contrib1,color=82,linestyle=1,thick=2,/noerase $
-    ,xrange=[xs,xe],yrange=[tmp_ys,tmp_ye],xstyle=5,ystyle=5
-  plot,ch_wav2*1000, contrib2,color=128,linestyle=1,thick=2,/noerase $
-    ,xrange=[xs,xe],yrange=[tmp_ys,tmp_ye],xstyle=5,ystyle=5
-  plot,ch_wav3*1000, contrib3,color=253,linestyle=1,thick=2,/noerase $
-    ,xrange=[xs,xe],yrange=[tmp_ys,tmp_ye],xstyle=5,ystyle=5
-    
-  ;; Plot枠
-  plot,obs_wav,obs_rad,xrange=[xs,xe],yrange=[ys,ye],xstyle=1,ystyle=1 $
-    ,color=0,/nodata,/noerase,title="Solar irradiance spectral"
-    
+ 
+
   ;cd,old_dir
   return
   
