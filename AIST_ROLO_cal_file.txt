@@ -1,0 +1,40 @@
+##
+## IDL計算設定ファイル MSS参考方式 (神山作成: kouyama@aist.go.jp)
+## 同じキーワードは下にあるものの方が優先される
+##
+
+## 
+OBS_date = 2017-11-03T16:05:00
+
+## 
+OUTPUT_directory = C:/work/ENVI_IDL/LunaCal/AIST_ROLO/results
+
+## generic Kernekが収められているディレクトリ名を書く
+KERNEL_file_directory = ./kernels/
+
+## MetaKRのファイル名
+METAKR_file_name = lunar_pos.tm
+
+## SPKのファイル名を書く. 1番での出力、2番での入力に兼用するので注意
+SPK_path = ./kernels/spk_satellite/terra.bsp
+
+## TLEのファイル名を書く
+TLE_file_name = ./tle/terra.tle
+
+## ROLO parameters
+ROLO_param_path = ./Data/ROLO_params.csv
+
+## Apollo
+SOIL_path = ./Data/Apollo_soil/62231_data.txt
+ROCK_path = ./Data/Apollo_soil/67445_data.csv
+
+## Solar irradiance model
+SOL_model_path = ./Data/Wehrli_1985.txt
+
+
+## For test (condition same as Kieffer & Stone, 2005)
+#sub_obs_lon_deg = 0.
+#sub_obs_lat_deg = 0.
+#sub_solar_lat = 0d * !dpi/180d
+#sub_solar_lon = 7d * !dpi/180d
+#phase_angle_deg = 7.
